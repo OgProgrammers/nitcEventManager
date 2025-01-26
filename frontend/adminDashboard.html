@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Pending Event Requests</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin-bottom: 2rem;
+        }
+        .website-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #430985;
+        }
+        .nav-options a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #430985;
+        }
+        .pending-requests {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .request-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .request-details {
+            flex-grow: 1;
+        }
+        .request-details h3 {
+            color: #430985;
+            margin-bottom: 10px;
+        }
+        .request-details p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .request-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-approve {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-deny {
+            background-color: #f44336;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <span class="website-name">Eventual</span>
+            <nav class="nav-options">
+                <a href="eventRegister.html">Create</a>
+                <a href="adminEvents.html">Events</a>
+                <a href="adminDashboard.html">Requests</a>
+                <a href="listOrganisers.html">Organizers</a>
+                <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+                <a href="profile.html" class="icon"><i class="fas fa-user"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="section-title">Pending Event Requests</h1>
+        <!-- Dynamic content will be added here -->
+        <div class="pending-requests">
+            <!-- The event cards will be dynamically generated using JavaScript -->
+        </div>
+    </main>
+
+    <script src="js/script_areq.js"></script>
+</body>
+</html>

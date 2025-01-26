@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleProfile.css">
+    <title>Basic Details</title>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h2>Account Details</h2>
+        </div>
+        <div class="profile-picture"></div>
+        <form class="profile-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="" disabled>
+            </div>
+            <div class="input-group">
+                <label for="institute-id">Email Id</label>
+                <input type="text" id="institute-id" placeholder="" disabled>
+            </div>
+            <div class="input-group">
+                <label for="status">Role</label>
+                <input type="text" id="status" placeholder="" disabled>
+            </div>
+            <div class="button-group">
+                <button type="button" class="logout-button" onclick="logout()">Logout</button>
+            </div>
+        </body>
+    <script>
+        // Function to fetch user details from the API
+       // Function to fetch user details from the API
+async function fetchUserDetails() {
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("username");
+
+        if (!username) {
+            console.error("Username is missing in the URL.");
+            alert("Invalid user. Please log in again.");
+            window.location.href = "login.html";
+            return;
+        }
+
+        const response = await fetch(`http://localhost:3000/users/${username}`); // Replace with your API endpoint
+        if (!response.ok) {
+            console.error(`Error: ${response.status} - ${response.statusText}`);
+            alert("Failed to fetch user details. Please try again.");
+            return;
+        }
+        const responseData = await response.json();
+        const dataString = JSON.stringify(responseData); // Convert JSON object to a string
+        console.log('Fetched user data as string:', dataString); // Log the stringified data
+      
+        const data = JSON.parse(dataString);
+        // Optionally, parse it back if you need to access individual properties
+         // Log the response to see the structure
+
+        // Ensure the fields exist in the response and populate them
+        
+            document.getElementById('username').value = String(data.username);
+            document.getElementById('institute-id').value = String(data.email);
+            document.getElementById('status').value = String(data.role);
+        
+
+    } catch (error) {
+        console.error('Error fetching user details:', error);
+        alert("An unexpected error occurred. Please try again.");
+    }
+}
+
+// Call the function when the page is loaded
+document.addEventListener('DOMContentLoaded', fetchUserDetails);
+
+// Logout function
+function logout() {
+    window.location.href = 'login.html'; // Redirect to the login page
+}
+
+    </script>
+
+</html>

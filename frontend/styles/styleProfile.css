@@ -1,0 +1,119 @@
+/* Reused styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../assets/steptodown.com318144.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    height: 730px;
+    width: 600px;
+    text-align: center;
+}
+
+.profile-header h2 {
+    font-family: "Public Sans", serif;
+    font-size: 35px;;
+    font-weight: 700;
+    color: #430985;
+    margin-bottom: 1.5rem;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 2rem auto;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    color: #8224ee;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px; /* Adds spacing below the label */
+    display: block; /* Ensures the label behaves like a block element */
+}
+
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1px #f1f6fc;
+    color: #5e0dbb;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    background: rgba(255, 255, 255, 0);
+    color: #5e0dbb;
+}
+
+.button-group {
+    margin-top: 30px; /* Adds spacing above the button group */
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Optional: space between buttons if needed */
+}
+
+
+.edit-button, .logout-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background: #5e0dbb;
+    color: #fff;
+    border: none;
+}
+
+.edit-button:hover {
+    background: #8224ee;
+}
+
+.logout-button {
+    background: #ffffff00;
+    color: #8224ee;
+    border: 2px solid #8224ee;
+}
+
+.logout-button:hover {
+    background: #8224ee;
+    color: #fff;
+}

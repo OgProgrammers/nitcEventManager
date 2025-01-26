@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <link rel="stylesheet" href="styles/styles_event1.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h2>Create a New Event</h2>
+        </div>
+        <form class="profile-form">
+            <div class="input-group">
+                <label for="event-type">Event Type</label>
+                <select id="event-type" name="event-type">
+                    <option value="hackathon">Hackathon</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="sports">Sports</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="music">Music</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="event-name">Event Name</label>
+                <input type="text" id="event-name" placeholder="Enter event name">
+            </div>
+            <div class="input-group">
+                <label for="venue">Venue</label>
+                <input type="text" id="venue" placeholder="Enter venue">
+            </div>
+            <div class="date-time-group">
+                <div class="input-group">
+                    <label for="start-date">Start Date</label>
+                    <div class="date-picker">
+                        <input type="date" id="start-date">
+                        <span class="calendar-icon">📅</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="start-time">Start Time</label>
+                    <input type="time" id="start-time">
+                </div>
+            </div>
+           
+            <div class="input-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Enter description" rows="4"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="edit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/script_evreg.js"></script>
+</body>
+</html>

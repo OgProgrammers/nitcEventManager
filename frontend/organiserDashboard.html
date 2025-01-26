@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles/stylesAdmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <span class="website-name">Eventual</span>
+            <input type="text" class="search-bar" placeholder="Search...">
+            <nav class="nav-options">
+                <a href="eventRegister.html">Create</a>
+                <a href="#">My Events</a>
+                <!-- <a href="#">Registrations</a> -->
+                <!-- <a href="#">Requests</a> -->
+                <!-- <a href="#">Organisers</a> -->
+                <a href="#" class="icon"><i class="fas fa-bell"></i></a> <!-- Notification Icon -->
+            <a href="profile_o.html" class="icon"><i class="fas fa-user"></i></a> <!-- Profile Icon -->
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <h1 class="section-title">My Organised Events</h1>
+        <div id="events-container">
+            <!-- Event cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+    <script src="js/scriptOrganiser.js"></script>
+</body>
+</html>
